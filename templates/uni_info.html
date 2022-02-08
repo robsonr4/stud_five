@@ -1,0 +1,16 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container items-center">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <p>First name: {{us.user.first_name}}</p>
+            <p>Last name: {{us.user.last_name}}</p>
+            <p>Current semester: {{us.current_sem}}</p>
+            <p>Album nr: {{us.album_nr}}</p>
+            <p>Major: {{major}}</p>
+        </div> 
+    </div>   
+</div>
+
+
+{% endblock content %}

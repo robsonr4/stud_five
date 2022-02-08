@@ -1,0 +1,36 @@
+{% extends 'index.html' %}{% load scrap_extras %} {% block content %}
+
+<div class="container">
+    {% for name in names %}
+    <h1>{{ name }}</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Max_points</th>
+                <th scope="col">Points</th>
+                <th scope="col">More_info</th>
+                <th scope="col">the_date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in atest|get_value_from_dict:name %}
+                <tr>
+                    <th scope="row">{{ row.name }}</th>
+                    <td>{{ row.max_points }}</td>
+                    <td>{{ row.points }}</td>
+                    <td>{{ row.more_info }}</td>
+                    <td>{{ row.the_date }}</td>
+                </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+    {% endfor %}
+    
+</div>
+
+
+
+
+{% endblock content %}

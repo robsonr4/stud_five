@@ -1,0 +1,22 @@
+body {
+    background-color: #e6e0bb;
+}
+
+.nav-link {
+    vertical-align: bottom;
+}
+
+.btn-primary {
+    background-color: #0d0f45;
+    border-color: #0d0f45;
+    color: white;
+}
+
+.list-group-item.list-group-item-action.active {
+    background-color: #f66384;
+    border-color: #f66384;
+}
+
+#content {
+    height: 100%;
+}

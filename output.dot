@@ -1,6 +1,6 @@
 digraph model_graph {
   // Dotfile by Django-Extensions graph_models
-  // Created: 2021-11-25 10:40
+  // Created: 2021-12-04 19:10
   // Cli Options: -a
 
   fontname = "Roboto"
@@ -458,11 +458,11 @@ digraph model_graph {
 
 
 
-  scrapy_ects_models_AbstractTest [label=<
+  scrapy_ects_models_AbstractAssignment [label=<
     <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
     <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
     <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-    AbstractTest
+    AbstractAssignment
     </B></FONT></TD></TR>
   
   
@@ -501,28 +501,44 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>student</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (None)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">course_passed</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">BooleanField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto">degree</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto">FloatField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
     <FONT FACE="Roboto">ects</FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto">IntegerField</FONT>
     </TD></TR>
   
   
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto">finished</FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto">BooleanField</FONT>
-    </TD></TR>
-  
-  
     </TABLE>
     >]
 
-  scrapy_ects_models_AbstractAssignment [label=<
+  scrapy_ects_models_AbstractTest [label=<
     <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
     <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
     <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-    AbstractAssignment
+    AbstractTest
     </B></FONT></TD></TR>
   
   
@@ -546,32 +562,6 @@ digraph model_graph {
     <FONT COLOR="#7B7B7B" FACE="Roboto">points</FONT>
     </TD><TD ALIGN="LEFT">
     <FONT COLOR="#7B7B7B" FACE="Roboto">IntegerField</FONT>
-    </TD></TR>
-  
-  
-    </TABLE>
-    >]
-
-  scrapy_ects_models_Titles [label=<
-    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
-    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
-    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-    Titles
-    </B></FONT></TD></TR>
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><B>id</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><B>AutoField</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto">name</FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto">CharField</FONT>
     </TD></TR>
   
   
@@ -611,17 +601,9 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto">current_sem</FONT>
+    <FONT COLOR="#7B7B7B" FACE="Roboto">current_sem</FONT>
     </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto">IntegerField</FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto">start_of_major</FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto">DateField</FONT>
+    <FONT COLOR="#7B7B7B" FACE="Roboto">IntegerField</FONT>
     </TD></TR>
   
   
@@ -645,9 +627,9 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto">duration_in_sem</FONT>
+    <FONT COLOR="#7B7B7B" FACE="Roboto">duration_in_sem</FONT>
     </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto">IntegerField</FONT>
+    <FONT COLOR="#7B7B7B" FACE="Roboto">IntegerField</FONT>
     </TD></TR>
   
   
@@ -662,11 +644,11 @@ digraph model_graph {
     </TABLE>
     >]
 
-  scrapy_ects_models_Specialization [label=<
+  scrapy_ects_models_Spec [label=<
     <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
     <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
     <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-    Specialization
+    Spec
     </B></FONT></TD></TR>
   
   
@@ -696,72 +678,6 @@ digraph model_graph {
     </TABLE>
     >]
 
-  scrapy_ects_models_SpecCourseStat [label=<
-    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
-    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
-    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
-    SpecCourseStat<BR/>&lt;<FONT FACE="Roboto"><I>AbstractCourse</I></FONT>&gt;
-    </B></FONT></TD></TR>
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><B>id</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><B>AutoField</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>spec_assignment</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><B>spec_course</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>spec_test</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><B>student</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><I>ects</I></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><I>IntegerField</I></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><I>finished</I></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><I>BooleanField</I></FONT>
-    </TD></TR>
-  
-  
-    </TABLE>
-    >]
-
   scrapy_ects_models_MajorCourseStat [label=<
     <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
     <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
@@ -779,14 +695,6 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>major_assignment</B></FONT>
-    </TD><TD ALIGN="LEFT">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>ForeignKey (id)</B></FONT>
-    </TD></TR>
-  
-  
-  
-    <TR><TD ALIGN="LEFT" BORDER="0">
     <FONT FACE="Roboto"><B>major_course</B></FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
@@ -795,17 +703,25 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>major_test</B></FONT>
+    <FONT FACE="Roboto"><I><B>student</B></I></FONT>
     </TD><TD ALIGN="LEFT">
-    <FONT COLOR="#7B7B7B" FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    <FONT FACE="Roboto"><I><B>ForeignKey (id)</B></I></FONT>
     </TD></TR>
   
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><B>student</B></FONT>
+    <FONT FACE="Roboto"><I>course_passed</I></FONT>
     </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    <FONT FACE="Roboto"><I>BooleanField</I></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><I>degree</I></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><I>FloatField</I></FONT>
     </TD></TR>
   
   
@@ -817,11 +733,61 @@ digraph model_graph {
     </TD></TR>
   
   
+    </TABLE>
+    >]
+
+  scrapy_ects_models_SpecCourseStat [label=<
+    <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+    <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+    <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+    SpecCourseStat<BR/>&lt;<FONT FACE="Roboto"><I>AbstractCourse</I></FONT>&gt;
+    </B></FONT></TD></TR>
+  
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto"><I>finished</I></FONT>
+    <FONT FACE="Roboto"><B>id</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>AutoField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>spec_course</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><I><B>student</B></I></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><I><B>ForeignKey (id)</B></I></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><I>course_passed</I></FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto"><I>BooleanField</I></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><I>degree</I></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><I>FloatField</I></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><I>ects</I></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><I>IntegerField</I></FONT>
     </TD></TR>
   
   
@@ -913,6 +879,14 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>major</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
     <FONT FACE="Roboto"><I>max_points</I></FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto"><I>IntegerField</I></FONT>
@@ -950,6 +924,14 @@ digraph model_graph {
     <FONT FACE="Roboto"><B>id</B></FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto"><B>AutoField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>spec</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
     </TD></TR>
   
   
@@ -997,6 +979,14 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>major</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
     <FONT FACE="Roboto"><I>max_points</I></FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto"><I>IntegerField</I></FONT>
@@ -1034,6 +1024,14 @@ digraph model_graph {
     <FONT FACE="Roboto"><B>id</B></FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto"><B>AutoField</B></FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT FACE="Roboto"><B>spec</B></FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
     </TD></TR>
   
   
@@ -1097,9 +1095,17 @@ digraph model_graph {
   
   
     <TR><TD ALIGN="LEFT" BORDER="0">
-    <FONT FACE="Roboto">current_ects</FONT>
+    <FONT COLOR="#7B7B7B" FACE="Roboto">current_ects</FONT>
     </TD><TD ALIGN="LEFT">
-    <FONT FACE="Roboto">IntegerField</FONT>
+    <FONT COLOR="#7B7B7B" FACE="Roboto">IntegerField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">department</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">CharField</FONT>
     </TD></TR>
   
   
@@ -1108,6 +1114,14 @@ digraph model_graph {
     <FONT FACE="Roboto">max_ects</FONT>
     </TD><TD ALIGN="LEFT">
     <FONT FACE="Roboto">IntegerField</FONT>
+    </TD></TR>
+  
+  
+  
+    <TR><TD ALIGN="LEFT" BORDER="0">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">start_of_major</FONT>
+    </TD><TD ALIGN="LEFT">
+    <FONT COLOR="#7B7B7B" FACE="Roboto">DateField</FONT>
     </TD></TR>
   
   
@@ -1199,56 +1213,59 @@ digraph model_graph {
   [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
 
 
+  scrapy_ects_models_AbstractCourse -> scrapy_ects_models_Student
+  [label=" student (abstractcourse)"] [arrowhead=none, arrowtail=dot, dir=both];
+
   scrapy_ects_models_Student -> django_contrib_auth_models_User
   [label=" user (student)"] [arrowhead=none, arrowtail=none, dir=both];
 
-  scrapy_ects_models_Specialization -> scrapy_ects_models_Major
-  [label=" major (specialization)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_SpecCourse
-  [label=" spec_course (speccoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_Student
-  [label=" student (speccoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_SpecTest
-  [label=" spec_test (speccoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_SpecAssignment
-  [label=" spec_assignment (speccoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_AbstractCourse
-  [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
-
-  scrapy_ects_models_MajorCourseStat -> scrapy_ects_models_MajorCourse
-  [label=" major_course (majorcoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
+  scrapy_ects_models_Spec -> scrapy_ects_models_Major
+  [label=" major (spec)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   scrapy_ects_models_MajorCourseStat -> scrapy_ects_models_Student
   [label=" student (majorcoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  scrapy_ects_models_MajorCourseStat -> scrapy_ects_models_MajorTest
-  [label=" major_test (majorcoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
-
-  scrapy_ects_models_MajorCourseStat -> scrapy_ects_models_MajorAssignment
-  [label=" major_assignment (majorcoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
+  scrapy_ects_models_MajorCourseStat -> scrapy_ects_models_MajorCourse
+  [label=" major_course (majorcoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   scrapy_ects_models_MajorCourseStat -> scrapy_ects_models_AbstractCourse
+  [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
+
+  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_Student
+  [label=" student (speccoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_SpecCourse
+  [label=" spec_course (speccoursestat)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  scrapy_ects_models_SpecCourseStat -> scrapy_ects_models_AbstractCourse
   [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
 
   scrapy_ects_models_MajorCourse -> scrapy_ects_models_Major
   [label=" major (majorcourse)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  scrapy_ects_models_SpecCourse -> scrapy_ects_models_Specialization
+  scrapy_ects_models_SpecCourse -> scrapy_ects_models_Spec
   [label=" spec (speccourse)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  scrapy_ects_models_MajorAssignment -> scrapy_ects_models_MajorCourseStat
+  [label=" major (majorassignment)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   scrapy_ects_models_MajorAssignment -> scrapy_ects_models_AbstractAssignment
   [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
 
+  scrapy_ects_models_SpecAssignment -> scrapy_ects_models_SpecCourseStat
+  [label=" spec (specassignment)"] [arrowhead=none, arrowtail=dot, dir=both];
+
   scrapy_ects_models_SpecAssignment -> scrapy_ects_models_AbstractAssignment
   [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
 
+  scrapy_ects_models_MajorTest -> scrapy_ects_models_MajorCourseStat
+  [label=" major (majortest)"] [arrowhead=none, arrowtail=dot, dir=both];
+
   scrapy_ects_models_MajorTest -> scrapy_ects_models_AbstractTest
   [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
+
+  scrapy_ects_models_SpecTest -> scrapy_ects_models_SpecCourseStat
+  [label=" spec (spectest)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   scrapy_ects_models_SpecTest -> scrapy_ects_models_AbstractTest
   [label=" abstract\ninheritance"] [arrowhead=empty, arrowtail=none, dir=both];
@@ -1259,7 +1276,7 @@ digraph model_graph {
   scrapy_ects_models_MajorStat -> scrapy_ects_models_Student
   [label=" student (majorstat)"] [arrowhead=none, arrowtail=dot, dir=both];
 
-  scrapy_ects_models_SpecStat -> scrapy_ects_models_Specialization
+  scrapy_ects_models_SpecStat -> scrapy_ects_models_Spec
   [label=" spec (specstat)"] [arrowhead=none, arrowtail=dot, dir=both];
 
   scrapy_ects_models_SpecStat -> scrapy_ects_models_Student

@@ -1,0 +1,32 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col-4 text-white">
+            <div class="card p-3 mb-3" style="background-color: #f44336; height: 250px" onclick="location.href='{% url 'uni_points' %}'">
+                <blockquote class="blockquote mb-0 card-body">
+                <p>Subject's component points</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-4 text-white">
+            <div class="card p-3 mb-3" style="background-color: #f44336; height: 250px" onclick="location.href='{% url 'uni_test' %}'">
+                <blockquote class="blockquote mb-0 card-body">
+                <p class="my-auto">Assignments | Tests</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-4 text-white">
+            <div class="card p-3 mb-3" style="background-color: #f44336; height: 250px" onclick="location.href='{% url 'uni_info' %}'">
+                <blockquote class="blockquote mb-0 card-body">
+                <p>Student's info</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

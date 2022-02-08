@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Launch Scrapy Spider",
+            "type": "python",
+            "request": "launch",
+            "module": "scrapy",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "crawl",
+                "ects"
+            ],
+            "console": "integratedTerminal",
+            "python.pythonPath": "//Anaconda3//envs//scrappyy//python.exe"
+        }
+    ]
+}

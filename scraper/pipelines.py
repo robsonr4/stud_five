@@ -6,11 +6,16 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+import django
 
 
-class TitlesPipeline:
-    pass
+class DjangoPipeline:
     def process_item(self, item, spider):
+        # try:
+        #     item.save()
+        #     return item
+        # except django.db.utils.IntegrityError:
+        #     pass
         item.save()
         return item
 

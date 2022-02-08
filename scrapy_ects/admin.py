@@ -1,10 +1,6 @@
 from django.contrib import admin
-from scrapy_ects.models import Titles, Student, Major, Specialization, MajorCourse, SpecCourse, MajorAssignment, SpecAssignment, MajorTest, SpecTest, MajorStat, MajorCourseStat, SpecCourseStat, SpecStat
+from scrapy_ects.models import Student, Major, Spec, MajorCourse, SpecCourse, MajorAssignment, SpecAssignment, MajorTest, SpecTest, MajorStat, MajorCourseStat, SpecCourseStat, SpecStat
 # Register your models here.
-
-
-class TitlesAdmin(admin.ModelAdmin):
-    pass
 
 
 class StudentAdmin(admin.ModelAdmin):
@@ -15,7 +11,7 @@ class MajorAdmin(admin.ModelAdmin):
     pass
 
 
-class SpecializationAdmin(admin.ModelAdmin):
+class SpecAdmin(admin.ModelAdmin):
     pass
 
 
@@ -29,6 +25,8 @@ class SpecCourseAdmin(admin.ModelAdmin):
 
 class MajorAssignmentAdmin(admin.ModelAdmin):
     pass
+
+
 class SpecAssignmentAdmin(admin.ModelAdmin):
     pass
 
@@ -36,8 +34,10 @@ class SpecAssignmentAdmin(admin.ModelAdmin):
 class MajorTestAdmin(admin.ModelAdmin):
     pass
 
+
 class SpecTestAdmin(admin.ModelAdmin):
     pass
+
 
 class MajorStatAdmin(admin.ModelAdmin):
     pass
@@ -49,14 +49,15 @@ class MajorCourseStatAdmin(admin.ModelAdmin):
 
 class SpecCourseStatAdmin(admin.ModelAdmin):
     pass
+
+
 class SpecStatAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.register(Titles, TitlesAdmin)
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Major, MajorAdmin)
-admin.site.register(Specialization, SpecializationAdmin)
+admin.site.register(Spec, SpecAdmin)
 admin.site.register(MajorCourse, MajorCourseAdmin)
 admin.site.register(SpecCourse, SpecCourseAdmin)
 admin.site.register(MajorAssignment, MajorAssignmentAdmin)

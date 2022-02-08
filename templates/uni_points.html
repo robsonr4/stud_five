@@ -1,0 +1,66 @@
+{% extends 'index.html' %} {% block content %}
+<div class="container">
+    <div class="row align-items-top justify-content-center">
+        <div class="col-12" style="width: 70%; height: 70%">
+            <canvas id="myChart"></canvas>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+            const ctx = document.getElementById("myChart").getContext("2d");
+            const labels = {{labels | safe}};
+            const data = {
+                labels,
+                datasets: [{
+                    label: 'Robert Falkowski',
+                    data: {{datas | safe}},
+                    fill: true,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    pointBackgroundColor: 'rgb(255, 99, 132)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(255, 99, 132)',
+                }, ],
+            };
+            const config = {
+                type: 'radar',
+                data: data,
+                options: {
+                    scales: {
+                        r: {
+                            grid: {
+                                lineWidth: 1,
+                                color: "#0d0f45"
+                            },
+                            ticks: {
+                                color: "#0d0f45",
+                                backdropColor: "#e6e0bb"
+                            },
+                            pointLabels: {
+                                color: "#0d0f45",
+                                font: {
+                                    size: 14,
+                                    family: "helvetica neue"
+                                },
+                            },
+                            angleLines: {
+                                display: false
+                            },
+                        },
+                    },
+                    elements: {
+                        line: {
+                            borderWidth: 3
+                        },
+                    },
+                },
+            };
+            const myChart = new Chart(ctx, config);
+        </script>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
